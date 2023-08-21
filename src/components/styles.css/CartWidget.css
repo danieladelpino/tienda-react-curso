@@ -1,0 +1,17 @@
+.cart-widget {
+    padding-right: 20px;
+  }
+
+  .cart-widget svg {
+    padding-right: 5px;
+  }
+  .cart-number {
+    background-color: #ff5733; 
+    color: white; 
+    padding: 3px 8px; 
+    border-radius: 50%;
+  }
+
+  .bi-cart {
+    padding-top: 10px;
+  }
