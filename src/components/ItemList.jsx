@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from "react"
-import "./Item";
+import Item from './Item';
 
 const ItemList = () => {
     const [items, setItems] = useState([]);
@@ -46,7 +46,7 @@ const ItemList = () => {
 
     return (
         <div className="item-list">
-            {items.map((Item) => ( 
+            {items.map((item) => ( 
             <Item key={item.id} item={item} />
             ))}
         </div>
