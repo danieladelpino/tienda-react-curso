@@ -1,0 +1,31 @@
+[
+    {
+        "id": 1,
+        "title": "Elegant Women's T-Shirt",
+        "image": "/public/images/women-t-shirt.png",
+        "description": "Step up your style game with this elegant women's t-shirt. Crafted with premium materials, it offers both comfort and sophistication. Its versatile design makes it perfect for both casual and formal occasions. Elevate your wardrobe with this timeless piece.",
+        "price": 29.99,
+        "stock": 5,
+        "category": "t-shirts"
+    },
+
+    {
+        "id": 2,
+        "title": "name",
+        "image": "src",
+        "description": "description",
+        "price": 19.99,
+        "stock": 5,
+        "category": "pants"
+    },
+
+    {
+        "id": 3,
+        "title": "name",
+        "image": "src",
+        "description": "description",
+        "price": 19.99,
+        "stock": 5,
+        "category": "accessories"
+    }
+]
