@@ -4,18 +4,19 @@
 
 .navbar {
   display: flex;
-  align-items: center; 
-  background: #f5dcdd;
-  color: black;
-  height: 50px;
+  align-items: center;
+  background: #e2dacd;
   padding: 15px;
+  padding-left: 30px;
+  font-size: 1.1rem;
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
-  justify-content: center; 
-  flex-grow: 1; 
+  justify-content: center;
+  flex-grow: 1;
+
 }
 
 .navbar li {
@@ -24,9 +25,15 @@
 }
 
 .navbar a {
-  color: black;
+  color: #444444;
   text-decoration: none;
+  font-weight: 600;
 }
+
+.navbar ul li a.active {
+  color: #f48eb8;
+}
+
 
 .navbar h1 {
   font-size: 2rem;

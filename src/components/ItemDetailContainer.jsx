@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react"
 import ItemDetail from './ItemDetail';
-
+import { useParams } from "react-router-dom";
+import productsJSON from './products.json'
 
 const mockAPI = (id) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             if (id !== undefined) {
-                const productFound = productsJSON.find(item => item.id === id);
+                const productFound = productsJSON.find(item => item.id == id);
                 if (productFound) {
                     resolve(productFound);
                 }

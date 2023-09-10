@@ -2,7 +2,7 @@ import './styles.css/CartWidget.css'
 
 const CartWidget = () => {
 
-    const itemCount = 0; 
+    const itemCount = 0;
 
     return (
         <div className="cart-widget">
