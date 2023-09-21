@@ -1,8 +1,15 @@
 import './styles.css/CartWidget.css'
+import { useCart } from "../context/cartContext";
 
 const CartWidget = () => {
 
-    const itemCount = 0;
+    const { cartItems } = useCart();
+
+    if (!cartItems) {
+        return null;
+    }
+
+    const itemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
 
     return (
         <div className="cart-widget">
