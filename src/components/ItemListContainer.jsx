@@ -6,30 +6,40 @@ import productsJSON from "./products.json";
 import ItemList from "./ItemList";
 import { useParams } from 'react-router-dom';
 import HomePage from './HomePage';
+import { collection, getDocs, getFirestore } from 'firebase/firestore';
 
-const mockAPI = (id) => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
 
-            if (id !== undefined) {
-                const productsFilter = productsJSON.filter(item => item.category === id);
-                resolve(productsFilter)
-            } else {
-                resolve(productsJSON)
-            }
+// const mockAPI = (id) => {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
 
-        }, 2000);
-    })
-}
+//             if (id !== undefined) {
+//                 const productsFilter = productsJSON.filter(item => item.category === id);
+//                 resolve(productsFilter)
+//             } else {
+//                 resolve(productsJSON)
+//             }
+
+//         }, 2000);
+//     })
+// }
 
 const ItemListContainer = () => {
 
     const [products, setProducts] = useState([]);
     const { id } = useParams()
-    console.log(id)
 
     useEffect(() => {
-        mockAPI(id).then((data) => setProducts(data))
+        const db = getFirestore();
+        const productsRef = collection(db, "products")
+
+        getDocs(productsRef).then((snapshot) => {
+            setProducts(
+                snapshot.docs.map((doc) => {
+                    return { id: doc.id, ...doc.data() }
+                })
+            );
+        });
     }, [id]);
 
     return (

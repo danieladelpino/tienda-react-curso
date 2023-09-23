@@ -12,13 +12,10 @@ const ItemDetail = ({ product }) => {
 
     const onAdd = (value) => {
         setQuantity(value);
+        if (value > 0) {
+            addItem({ id: product.id, name: product.title, price: product.price }, value);
+        }  
     };
-
-    const handleBuyClick = () => {
-        if (quantity > 0) {
-          addItem({ id: product.id, name: product.title, price: product.price }, quantity);
-        }
-      };
 
     return (
         <div className='item-detail'>
@@ -27,8 +24,7 @@ const ItemDetail = ({ product }) => {
                 <h2>{product.title}</h2>
                 <p> {product.description} </p>
                 <span> ${product.price} </span>
-                {quantity ? <Link to="/cart">Finalizar Compra</Link> : <ItemCount stock={product.stock} onAdd={onAdd} />  }
-                <button onClick={handleBuyClick}>Comprar</button>
+                {quantity ? <Link to="/cart">Finalize purchase</Link> : <ItemCount stock={product.stock} onAdd={onAdd} />  }
             </div>
             
         </div>

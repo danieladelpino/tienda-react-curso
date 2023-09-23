@@ -5,24 +5,15 @@ import { useCart } from "../context/cartContext";
 const Cart = () => {
   const { cartItems, removeItem } = useCart();
 
-  if (!cartItems) {
-    return (
-      <div>
-        <h2>Desglose de tu carrito</h2>
-        <p>No hay ítems en el carrito.</p>
-        <Link to="/">Volver al Landing</Link>
-      </div>
-    );
-  }
-
   const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+
   return (
     <div>
       <h2>Desglose de tu carrito</h2>
-      {!cartItems ? (
+      {(cartItems.length === 0) ? (
         <div>
           <p>No hay ítems en el carrito.</p>
-          <Link to="/">Volver al Landing</Link>
+          <Link to="/">Back to top</Link>
         </div>
       ) : (
         <div>
@@ -30,12 +21,12 @@ const Cart = () => {
             {cartItems.map((item) => (
               <li key={item.id}>
                 {item.name} x{item.quantity}: ${item.price * item.quantity}
-                <button onClick={() => removeItem(item.id)}>Eliminar</button>
+                <button onClick={() => removeItem(item.id)}>Remove</button>
               </li>
             ))}
           </ul>
           <p>Total: ${totalPrice}</p>
-          <Link to="/">Seguir comprando</Link>
+          <Link to="/">Keep buying</Link>
         </div>
       )}
     </div>
