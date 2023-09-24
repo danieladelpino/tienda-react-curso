@@ -27,6 +27,7 @@ const Cart = () => {
           </ul>
           <p>Total: ${totalPrice}</p>
           <Link to="/">Keep buying</Link>
+          <Link to="/checkout"> Finalize purchase </Link>
         </div>
       )}
     </div>
