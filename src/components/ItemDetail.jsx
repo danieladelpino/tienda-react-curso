@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './styles.css/ItemList.css'
-import './styles.css/item.css'
+import './styles.css/Item.css'
 import ItemCount from './ItemCount';
 import { Link } from 'react-router-dom';
 import { useCart } from "../context/cartContext";
