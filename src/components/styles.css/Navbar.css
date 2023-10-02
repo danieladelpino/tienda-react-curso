@@ -5,7 +5,7 @@
 .navbar {
   display: flex;
   align-items: center;
-  background: #e2dacd;
+  background: #e4dfd6;
   padding: 15px;
   padding-left: 30px;
   font-size: 1.1rem;
@@ -22,18 +22,20 @@
 .navbar li {
   padding: 10px;
   font-weight: 500;
+
 }
 
 .navbar a {
   color: #444444;
   text-decoration: none;
   font-weight: 600;
+
 }
 
 .navbar ul li a.active {
-  color: #f48eb8;
-}
+  color: #ED91BF;
 
+}
 
 .navbar h1 {
   font-size: 2rem;

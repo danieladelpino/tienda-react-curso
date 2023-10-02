@@ -10,14 +10,14 @@ const ItemDetailContainer = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        
+
         const db = getFirestore();
         const docRef = doc(db, "products", id)
 
         getDoc(docRef).then((snapshot) => {
             setProducts(
                 { id: snapshot.id, ...snapshot.data() }
-              );
+            );
         });
     }, [id]);
 

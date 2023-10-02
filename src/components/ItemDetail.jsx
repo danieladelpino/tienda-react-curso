@@ -8,13 +8,13 @@ import { useCart } from "../context/cartContext";
 const ItemDetail = ({ product }) => {
 
     const [quantity, setQuantity] = useState('')
-    const { addItem } = useCart(); 
+    const { addItem } = useCart();
 
     const onAdd = (value) => {
         setQuantity(value);
         if (value > 0) {
-            addItem({ id: product.id, name: product.title, price: product.price }, value);
-        }  
+            addItem({ id: product.id, title: product.title, price: product.price }, value);
+        }
     };
 
     return (
@@ -24,11 +24,11 @@ const ItemDetail = ({ product }) => {
                 <h2>{product.title}</h2>
                 <p> {product.description} </p>
                 <span> ${product.price} </span>
-                {quantity ? <Link to="/cart">Finalize purchase</Link> : <ItemCount stock={product.stock} onAdd={onAdd} />  }
+                {quantity ? <Link to="/cart">Finalize purchase</Link> : <ItemCount stock={product.stock} onAdd={onAdd} />}
             </div>
-            
+
         </div>
-        
+
     );
 };
 

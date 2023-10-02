@@ -5,6 +5,7 @@ import '../App.css'
 import ItemList from "./ItemList";
 import { useParams } from 'react-router-dom';
 import HomePage from './HomePage';
+import Footer from './Footer'
 import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
 
 const ItemListContainer = () => {
@@ -30,6 +31,7 @@ const ItemListContainer = () => {
         <div className="item-list-container">
             <HomePage />
             <ItemList products={products} />
+            <Footer />
         </div>
 
     )
