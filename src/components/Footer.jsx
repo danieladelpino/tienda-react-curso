@@ -23,9 +23,9 @@ function Footer() {
 
                 <div className="footer-social">
                     <ul>
-                        <li><img src="../public/images/facebook.svg" alt="" /></li>
-                        <li><img src="../public/images/instagram.svg" alt="" /></li>
-                        <li><img src="../public/images/twitter.svg" alt="" /></li>
+                        <li><img src="./images/facebook.svg" alt="" /></li>
+                        <li><img src="./images/instagram.svg" alt="" /></li>
+                        <li><img src="./images/twitter.svg" alt="" /></li>
                     </ul>
                 </div>
             </div>
